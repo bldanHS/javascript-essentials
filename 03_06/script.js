@@ -22,3 +22,12 @@ const backpack = {
 };
 
 console.log("The backpack object:", backpack);
+console.log("The pocket number of the backpack is: ", backpack.pocketNum);
+console.log("The volume of the backpack is: ", backpack.volume);
+console.log("The straplength L is: ", backpack.strapLength.left); 
+
+console.log("The volume of the backpack is: ", backpack["volume"]);
+
+var valtozo = "volume";
+
+console.log(backpack[valtozo])
