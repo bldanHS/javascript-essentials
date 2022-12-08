@@ -5,19 +5,43 @@
  * - Add at least 5 book objects.
  */
 
-import Backpack from "./Backpack.js";
+class Book{
+  constructor(
+    title,
+    pageNumbers,
+    size,
+    topic,
+    readPages
+  ){
+    this.title = title;
+    this.pageNumbers = pageNumbers;
+    this.size = size;
+    this.topic = topic;
+    this.readPages = readPages;
+  }
+  read_some_pages(numOfPages)
+  {
+    this.numOfPages = numOfPages;
+    const recentlyReadPages = this.readPages + numOfPages;
+    this.readPages = recentlyReadPages;
+    return recentlyReadPages;
+  }
+}
 
-const everydayPack = new Backpack(
-  "Everyday Backpack",
-  30,
-  "grey",
-  15,
-  26,
-  26,
-  false,
-  "December 5, 2018 15:00:00 PST"
-);
+const book1 = new Book("Atomic Habits", 312, "medium", "self improvement", 15);
+console.log(book1.numOfPages);
+console.log(book1.readPages);
+book1.read_some_pages(34);
+console.log(book1.readPages);
 
-console.log("The everydayPack object:", everydayPack);
-console.log("The pocketNum value:", everydayPack.pocketNum);
-console.log("Days since aquired:", everydayPack.backpackAge());
+
+const book2 = new Book("Egri Csillagok", 590, "big", "gy0ny0r", 0);
+book2.read_some_pages(24);
+console.log(book2.title, "is a pretty nice book, and it has", book2.pageNumbers, "pages.");
+console.log("I've read", book2.readPages, "of it");
+console.log(book2.size);
+console.log(book2);
+
+
+
+
