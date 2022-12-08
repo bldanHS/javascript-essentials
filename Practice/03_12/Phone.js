@@ -11,6 +11,8 @@ class Phone {
     this.muteStatus = muteStatus;
   }
 }
+const iphone12mini = new Phone();
+console.log(iphone12mini)
 
 class Bike {
   constructor(size, price, wheelNumber, wheelDiameter, color) {
@@ -30,3 +32,7 @@ class Bike {
     this.wheelDiameter = newWheelDiameter;
   }
 }
+
+const merida = new Bike();
+
+console.log(merida)
