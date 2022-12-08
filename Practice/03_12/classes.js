@@ -12,11 +12,12 @@ class Phone {
   }
 }
 const iphone12mini = new Phone();
-console.log(iphone12mini)
+console.log(iphone12mini);
 
 class Bike {
-  constructor(size, price, wheelNumber, wheelDiameter, color) {
-    (this.size = size),
+  constructor(name, size, price, wheelNumber, wheelDiameter, color) {
+    (this.name = name),
+      (this.size = size),
       (this.price = price),
       (this.wheelNumber = wheelNumber),
       (this.wheelDiameter = wheelDiameter),
@@ -33,6 +34,13 @@ class Bike {
   }
 }
 
-const merida = new Bike();
+const merida = new Bike("merida", 26, 50000, 4, 20, "black");
 
-console.log(merida)
+console.log(merida);
+
+console.log("modifying the merida bike");
+
+merida.changeWheels(1, 34);
+merida.name = "merida triple trust";
+merida.color = "green"
+console.log(merida);
